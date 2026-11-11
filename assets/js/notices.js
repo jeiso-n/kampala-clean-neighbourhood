@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{const list=document.querySelector('#notice-list');if(!list)return;/* Add only dated notices confirmed by a reliable organiser or authority. */});
