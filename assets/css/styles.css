@@ -844,4 +844,12 @@ header.site-header { position: sticky; top: 0; background: rgba(255,255,255,.97)
   .contrast-toggle-btn { padding: .42rem .5rem; font-size: .68rem; }
   .nav-btn-report { padding: .48rem .58rem; font-size: .68rem; }
   .mobile-menu-toggle { padding: .42rem .55rem; font-size: .72rem; }
-}
+}/* Homepage content hierarchy: fewer sections, clearer reading rhythm. */
+.section-intro { max-width: 680px; margin: 0 auto 2rem; text-align: center; }
+.section-intro p { color: var(--text-muted); }
+.home-guidance { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; padding-top: 1rem; padding-bottom: 3rem; }
+.home-guidance > div { padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); }
+.home-guidance p { color: var(--text-muted); }
+.text-link { display: inline-flex; font-weight: 700; }
+.footer-compact { grid-template-columns: 1.5fr 1fr 1fr; }
+@media (max-width: 768px) { .home-guidance, .footer-compact { grid-template-columns: 1fr; } }
