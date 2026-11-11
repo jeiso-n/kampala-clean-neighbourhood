@@ -1,1 +1,115 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Privacy and reporting guidance | Kampala Clean Neighbourhood</title><link rel="stylesheet" href="assets/css/styles.css"><script src="assets/js/main.js" defer></script></head><body><header class="site-header"><a class="brand" href="index.html">Kampala Clean Neighbourhood</a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="report.html">Report</a><a href="contact.html">Contact</a></nav></header><main class="container"><p class="eyebrow">Digital ethics</p><h1>Privacy and responsible reporting</h1><h2>What this prototype stores</h2><p>The current incident form stores report text in the browser's localStorage on the device used to submit it. It does not upload reports to a server or notify KCCA, a local leader, or a waste collector. Browser data may be lost when site data is cleared.</p><h2>Photos and personal information</h2><p>Do not upload images containing faces, vehicle registration numbers, private documents, or other identifying details unless necessary and you have a lawful reason to share them. Avoid including sensitive personal information in descriptions.</p><h2>Review and verification</h2><p>Before any future public sharing, reports should be reviewed by an authorised administrator, checked against pilot boundaries, and assessed for authenticity. Never publish a reporter's contact details or exact home location.</p><h2>Limitations</h2><p>This prototype is not an emergency service or official KCCA reporting channel. For urgent hazards, contact the appropriate official service directly.</p></main><footer class="site-footer"><a href="contact.html">Contact</a></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy &amp; Reporting Guidance | Kampala Clean Neighbourhood</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <aside class="civic-notice-bar">
+        <div><span class="badge-demo">Civic Ethics</span> Guidance on resident reporting ethics, personal privacy, and
+            static data storage.</div>
+    </aside>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-wrapper">
+                <div class="brand-logo-icon">&#9851;</div>
+                <div class="brand-text-block">
+                    <span class="brand-title">KAMPALA CLEAN</span>
+                    <span class="brand-tagline">Neighbourhood Environmental Initiative</span>
+                </div>
+            </a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="schedules.html" class="nav-link">Schedules</a></li>
+                    <li><a href="collectors.html" class="nav-link">Find Collector</a></li>
+                    <li><a href="waste-guide.html" class="nav-link">Waste Guide</a></li>
+                    <li><a href="recycling.html" class="nav-link">Recycling</a></li>
+                    <li><a href="notices.html" class="nav-link">Notices</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="report.html" class="nav-btn-report">&#9888; Report Problem</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="contrast-toggle-btn" aria-label="Toggle high contrast view">&#9681; Contrast</button>
+                <button class="mobile-menu-toggle" aria-label="Open mobile navigation menu">&#9776;</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <header class="page-header">
+            <div class="container">
+                <h1>Privacy, Data Ethics &amp; Reporting Guidance</h1>
+                <p>How we handle information, respect citizen privacy, and promote fair reporting across Kampala's
+                    communities.</p>
+            </div>
+        </header>
+
+        <div class="container" style="max-width:850px;">
+            <h2>1. Static Client-Side Data Architecture</h2>
+            <p>Kampala Clean Neighbourhood is built using client-side web technologies (HTML5, CSS3, and Vanilla
+                JavaScript). The website does not transmit your personal contact details, IP address, or uploaded images
+                to external third-party servers. All demonstration incident reports remain safely in your browser's
+                private <code>localStorage</code> sandbox.</p>
+
+            <h2>2. Anonymous Reporting</h2>
+            <p>We recognize that reporting illegal dumping or commercial pollution can raise community safety concerns.
+                Residents may submit reports without providing a name or telephone number.</p>
+
+            <h2>3. Responsible Photo Evidence Guidelines</h2>
+            <p>When photographing sanitation issues:</p>
+            <ul style="padding-left:1.5rem; color:var(--text-muted); margin-bottom:1.5rem;">
+                <li>Focus directly on the environmental hazard (overflowing skip, blocked culvert, or dumped refuse).
+                </li>
+                <li>Do not photograph children or identifiable bystanders without express consent.</li>
+                <li>Do not enter private properties to obtain photographs. Focus on public roads, road reserves, and
+                    drainage paths.</li>
+            </ul>
+
+            <h2>4. Academic &amp; Non-Governmental Status</h2>
+            <p>This platform is an educational prototype developed at Victoria University Kampala. Submitting a report
+                here does not initiate official legal proceedings or municipal enforcement action under the <em>National
+                    Environment Act</em>.</p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>Kampala Clean Neighbourhood</h4>
+                <p>Victoria University Kampala — Course 1315 ST.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="report.html">Report Problem</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal Context</h4>
+                <p>Compliant with Uganda Data Protection and Privacy Act principles.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Academic Project</h4>
+                <p>Internet Technology &amp; Web Design</p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Kampala Clean Neighbourhood Initiative</div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

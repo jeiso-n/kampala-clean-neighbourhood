@@ -1,1 +1,169 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Contact | Kampala Clean Neighbourhood</title><link rel="stylesheet" href="assets/css/styles.css"><script src="assets/js/main.js" defer></script></head><body><header class="site-header"><a class="brand" href="index.html">Kampala Clean Neighbourhood</a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="notices.html">Notices</a><a href="faq.html">FAQs</a></nav></header><main class="container"><p class="eyebrow">Community engagement</p><h1>Get involved</h1><p>We are collecting verified community information for the pilot. No official division-office contacts are published here until confirmed.</p><form class="panel" id="contact-form"><label for="contact-name">Your name (optional)</label><input id="contact-name" name="name" maxlength="100"><label for="contact-message">Message or verified resource suggestion</label><textarea id="contact-message" name="message" rows="5" required maxlength="1500"></textarea><button class="button" type="submit">Prepare message</button><p id="contact-feedback" role="status"></p></form><p class="notice">This demonstration form does not send email or transmit data. Please use a verified official contact channel for urgent matters.</p></main><footer class="site-footer"><a href="privacy.html">Privacy guidance</a></footer><script>document.getElementById('contact-form')?.addEventListener('submit',e=>{e.preventDefault();document.getElementById('contact-feedback').textContent='This demo does not send messages. Please use an independently verified contact channel.';});</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Kampala Clean Neighbourhood</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <aside class="civic-notice-bar">
+        <div><span class="badge-demo">Student Project</span> Victoria University Kampala (1315 ST). Division details
+            reflect actual administrative zones.</div>
+    </aside>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-wrapper">
+                <div class="brand-logo-icon">&#9851;</div>
+                <div class="brand-text-block">
+                    <span class="brand-title">KAMPALA CLEAN</span>
+                    <span class="brand-tagline">Neighbourhood Environmental Initiative</span>
+                </div>
+            </a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="schedules.html" class="nav-link">Schedules</a></li>
+                    <li><a href="collectors.html" class="nav-link">Find Collector</a></li>
+                    <li><a href="waste-guide.html" class="nav-link">Waste Guide</a></li>
+                    <li><a href="recycling.html" class="nav-link">Recycling</a></li>
+                    <li><a href="notices.html" class="nav-link">Notices</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="report.html" class="nav-btn-report">&#9888; Report Problem</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="contrast-toggle-btn" aria-label="Toggle high contrast view">&#9681; Contrast</button>
+                <button class="mobile-menu-toggle" aria-label="Open mobile navigation menu">&#9776;</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <header class="page-header">
+            <div class="container">
+                <h1>Contact Community Representatives</h1>
+                <p>Get in touch with the student project team or review division office locations across Kampala.</p>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="grid-2">
+                <section class="card" aria-label="Feedback Form">
+                    <h2 style="font-size:1.35rem; margin-bottom:1rem;">Send Project Feedback or Inquiry</h2>
+                    <form id="contact-form"
+                        onsubmit="event.preventDefault(); showToast('Thank you! Your feedback has been recorded in the local demo session.', 'success'); this.reset();">
+                        <div class="form-group">
+                            <label for="contact-name">Full Name <span class="required-star">*</span></label>
+                            <input type="text" id="contact-name" class="form-control" required
+                                placeholder="e.g. Sarah Namubiru">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email">Email Address <span class="required-star">*</span></label>
+                            <input type="email" id="contact-email" class="form-control" required
+                                placeholder="e.g. sarah@example.ug">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-division">Division of Interest</label>
+                            <select id="contact-division" class="form-control">
+                                <option value="Central">Central Division</option>
+                                <option value="Nakawa">Nakawa Division</option>
+                                <option value="Kawempe">Kawempe Division</option>
+                                <option value="Makindye">Makindye Division</option>
+                                <option value="Rubaga">Rubaga Division</option>
+                                <option value="All">All Kampala</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Message or Community Suggestion <span
+                                    class="required-star">*</span></label>
+                            <textarea id="contact-message" rows="5" class="form-control" required
+                                placeholder="Share your suggestions for improving collection schedules or waste education in your neighbourhood..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Send Message (Demo
+                            Mode)</button>
+                    </form>
+                </section>
+
+                <section>
+                    <h2>Kampala Division Reference Information</h2>
+                    <p style="color:var(--text-muted); margin-bottom:1.5rem;">For official waste concerns, contact your
+                        respective division council office:</p>
+
+                    <div class="card" style="margin-bottom:1rem;">
+                        <h3>Central Division Headquarters</h3>
+                        <p style="font-size:0.875rem; margin-bottom:0.25rem;">Location: Commercial &amp; Civic Plaza,
+                            Nakasero</p>
+                        <p style="font-size:0.875rem; color:var(--text-muted);">Serving Nakasero, Kamwokya, Kisenyi, Old
+                            Kampala</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom:1rem;">
+                        <h3>Nakawa Division Council</h3>
+                        <p style="font-size:0.875rem; margin-bottom:0.25rem;">Location: Jinja Road, near Kyambogo
+                            Junction</p>
+                        <p style="font-size:0.875rem; color:var(--text-muted);">Serving Ntinda, Bukoto, Naguru, Luzira,
+                            Banda</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom:1rem;">
+                        <h3>Kawempe Division Urban Council</h3>
+                        <p style="font-size:0.875rem; margin-bottom:0.25rem;">Location: Bombo Road, Kawempe T-Junction
+                        </p>
+                        <p style="font-size:0.875rem; color:var(--text-muted);">Serving Bwaise, Kalerwe, Komamboga,
+                            Mulago</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Academic Team Office</h3>
+                        <p style="font-size:0.875rem; margin-bottom:0.25rem;">Victoria University Kampala &bull; Faculty
+                            of Science &amp; Technology</p>
+                        <p style="font-size:0.875rem; color:var(--text-muted);">Course: Internet Technology &amp; Web
+                            Design (1315 ST)</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>Kampala Clean Neighbourhood</h4>
+                <p>Victoria University Kampala — Course 1315 ST.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schedules.html">Schedules</a></li>
+                    <li><a href="report.html">Report Problem</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Divisions</h4>
+                <p>Central, Nakawa, Kawempe, Makindye, Rubaga</p>
+            </div>
+            <div class="footer-col">
+                <h4>Notice</h4>
+                <p>Demonstration Academic Prototype</p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Kampala Clean Neighbourhood Initiative</div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,1 +1,192 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Report a problem | Kampala Clean Neighbourhood</title><link rel="stylesheet" href="assets/css/styles.css"><script src="assets/js/main.js" defer></script><script src="assets/js/report.js" defer></script></head><body><header class="site-header"><a class="brand" href="index.html">Kampala Clean Neighbourhood</a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="schedules.html">Schedules</a><a href="privacy.html">Privacy</a></nav></header><main class="container"><p class="eyebrow">Community reporting</p><h1>Report a waste concern</h1><p>Use this form to record a missed collection, overflowing waste, or suspected illegal dumping. Submissions are saved only in this browser on this device; they are not sent to KCCA or a waste collector.</p><form id="incident-form" class="panel"><label for="incident-type">Type of concern</label><select id="incident-type" name="type" required><option value="">Choose a category</option><option>Missed collection</option><option>Overflowing rubbish</option><option>Suspected illegal dumping</option><option>Other</option></select><label for="area">Division / neighbourhood</label><input id="area" name="area" required maxlength="120"><label for="location">Specific location or landmark</label><input id="location" name="location" required maxlength="200"><label for="description">Description</label><textarea id="description" name="description" rows="4" required maxlength="1500"></textarea><label for="contact">Optional contact details</label><input id="contact" name="contact" maxlength="120"><label for="photo">Optional photo</label><input id="photo" name="photo" type="file" accept="image/*"><img id="photo-preview" alt="Selected photo preview" hidden class="photo-preview"><label class="check-label"><input type="checkbox" name="consent" required> I understand this report is stored locally in this browser and is not automatically submitted to an authority or service provider.</label><button class="button" type="submit">Save report on this device</button><p id="report-feedback" role="status" aria-live="polite"></p></form></main><footer class="site-footer"><a href="privacy.html">Privacy guidance</a></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Waste Problem | Kampala Clean Neighbourhood</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <aside class="civic-notice-bar">
+        <div><span class="badge-demo">Demo Submissions</span> Reports are safely stored in browser LocalStorage for
+            demonstration purposes.</div>
+    </aside>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-wrapper">
+                <div class="brand-logo-icon">&#9851;</div>
+                <div class="brand-text-block">
+                    <span class="brand-title">KAMPALA CLEAN</span>
+                    <span class="brand-tagline">Neighbourhood Environmental Initiative</span>
+                </div>
+            </a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="schedules.html" class="nav-link">Schedules</a></li>
+                    <li><a href="collectors.html" class="nav-link">Find Collector</a></li>
+                    <li><a href="waste-guide.html" class="nav-link">Waste Guide</a></li>
+                    <li><a href="recycling.html" class="nav-link">Recycling</a></li>
+                    <li><a href="notices.html" class="nav-link">Notices</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="report.html" class="nav-btn-report">&#9888; Report Problem</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="contrast-toggle-btn" aria-label="Toggle high contrast view">&#9681; Contrast</button>
+                <button class="mobile-menu-toggle" aria-label="Open mobile navigation menu">&#9776;</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <header class="page-header">
+            <div class="container">
+                <h1>Report a Waste or Sanitation Problem</h1>
+                <p>Report missed pickups, overflowing skips, blocked drainage channels, or illegal fly-tipping.</p>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="callout callout-warning">
+                <strong>Important Civic Notice:</strong> This demonstration platform records incident reports into your
+                browser's local storage. Reports are not automatically transmitted to KCCA dispatch units or licensed
+                collectors.
+            </div>
+
+            <div class="grid-2">
+                <section class="card" aria-label="Incident Report Form">
+                    <h2 style="font-size:1.4rem; margin-bottom:1rem;">Submit Incident Details</h2>
+                    <form id="report-problem-form" novalidate>
+                        <div class="form-group">
+                            <label for="report-category">Incident Category <span class="required-star">*</span></label>
+                            <select id="report-category" class="form-control" required>
+                                <option value="">-- Choose Category --</option>
+                                <option value="Missed Collection">Missed Scheduled Collection</option>
+                                <option value="Overflowing Rubbish Skip">Overflowing Roadside Skip / Container</option>
+                                <option value="Illegal Dumping">Illegal Dumping (Wetland / Road Reserve)</option>
+                                <option value="Blocked Storm Drain">Refuse-Blocked Drainage Channel</option>
+                                <option value="Open Refuse Burning">Hazardous Plastic / Open Burning</option>
+                                <option value="Other">Other Sanitation Concern</option>
+                            </select>
+                            <span class="form-error">Please select an incident category.</span>
+                        </div>
+
+                        <div class="grid-2" style="margin-top:0; gap:1rem;">
+                            <div class="form-group">
+                                <label for="report-division">Division <span class="required-star">*</span></label>
+                                <select id="report-division" class="form-control" required>
+                                    <option value="">-- Select Division --</option>
+                                    <option value="Central">Central Division</option>
+                                    <option value="Nakawa">Nakawa Division</option>
+                                    <option value="Kawempe">Kawempe Division</option>
+                                    <option value="Makindye">Makindye Division</option>
+                                    <option value="Rubaga">Rubaga Division</option>
+                                </select>
+                                <span class="form-error">Division is required.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="report-parish">Parish / Neighbourhood <span
+                                        class="required-star">*</span></label>
+                                <select id="report-parish" class="form-control" required disabled>
+                                    <option value="">-- Select Division First --</option>
+                                </select>
+                                <span class="form-error">Please select a parish.</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="report-location">Street, Stage or Landmark Details <span
+                                    class="required-star">*</span></label>
+                            <input type="text" id="report-location" class="form-control"
+                                placeholder="e.g. Near Total Energies, opposite primary school gate" required>
+                            <span class="form-error">Please provide a specific street or landmark.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="report-description">Problem Description <span
+                                    class="required-star">*</span></label>
+                            <textarea id="report-description" rows="4" class="form-control"
+                                placeholder="Describe the scale of the rubbish, how long it has been accumulating..."
+                                required></textarea>
+                            <span class="form-error">Please provide a detailed description.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="report-photo">Attach Photograph (Optional &bull; Max 2MB)</label>
+                            <input type="file" id="report-photo" class="form-control" accept="image/*">
+                            <div id="photo-preview-box"></div>
+                        </div>
+
+                        <fieldset
+                            style="border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.25rem;">
+                            <legend
+                                style="font-size:0.85rem; font-weight:700; padding:0 0.5rem; color:var(--text-muted);">
+                                Reporter Information (Optional)</legend>
+                            <div class="form-group" style="margin-bottom:0.75rem;">
+                                <label for="reporter-name">Your Name</label>
+                                <input type="text" id="reporter-name" class="form-control"
+                                    placeholder="Leave blank to report anonymously">
+                            </div>
+                            <div class="form-group" style="margin-bottom:0;">
+                                <label for="reporter-contact">Telephone / WhatsApp or Email</label>
+                                <input type="text" id="reporter-contact" class="form-control"
+                                    placeholder="For community follow-up if needed">
+                            </div>
+                        </fieldset>
+
+                        <button type="submit" class="btn btn-danger" style="width:100%;">&#9888; Submit Incident
+                            Report</button>
+                    </form>
+                </section>
+
+                <section aria-label="Submitted Reports Feed">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                        <h2 style="font-size:1.4rem; margin-bottom:0;">Recent Reports On This Device</h2>
+                        <button id="clear-storage-btn" class="btn btn-outline-dark"
+                            style="font-size:0.75rem; padding:0.3rem 0.6rem; display:none;">Clear Demo History</button>
+                    </div>
+                    <div id="user-reports-list"></div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>Kampala Clean Neighbourhood</h4>
+                <p>Victoria University Kampala — Course 1315 ST.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Reporting Guidance &amp; Data Ethics</a></li>
+                    <li><a href="faq.html">Reporting FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Divisions</h4>
+                <p>Central, Nakawa, Kawempe, Makindye, Rubaga</p>
+            </div>
+            <div class="footer-col">
+                <h4>Notice</h4>
+                <p>Demonstration LocalStorage Engine</p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Kampala Clean Neighbourhood Initiative</div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/report.js"></script>
+</body>
+
+</html>

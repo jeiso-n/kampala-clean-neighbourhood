@@ -1,40 +1,243 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kampala Clean Neighbourhood — community waste collection information and reporting.">
-  <title>Kampala Clean Neighbourhood</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Kampala Clean Neighbourhood - Community waste collection schedules, verified waste collectors, incident reporting and waste separation in Kampala.">
+  <title>Kampala Clean Neighbourhood | Civic Waste Management Platform</title>
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/main.js" defer></script>
 </head>
+
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <aside class="civic-notice-bar" aria-label="Academic Project Disclosure">
+    <div>
+      <span class="badge-demo">Academic Project</span>
+      Victoria University Kampala (1315 ST) — Independent civic technology prototype. Not official KCCA portal.
+    </div>
+  </aside>
+
   <header class="site-header">
-    <a class="brand" href="index.html">Kampala Clean Neighbourhood</a>
-    <nav aria-label="Main navigation">
-      <a href="schedules.html">Collection schedules</a>
-      <a href="collectors.html">Find a collector</a>
-      <a href="report.html">Report a problem</a>
-      <a href="waste-guide.html">Waste guide</a>
-    </nav>
+    <div class="header-container">
+      <a href="index.html" class="brand-wrapper" aria-label="Kampala Clean Neighbourhood Home">
+        <div class="brand-logo-icon" aria-hidden="true">&#9851;</div>
+        <div class="brand-text-block">
+          <span class="brand-title">KAMPALA CLEAN</span>
+          <span class="brand-tagline">Neighbourhood Environmental Initiative</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="schedules.html" class="nav-link">Schedules</a></li>
+          <li><a href="collectors.html" class="nav-link">Find Collector</a></li>
+          <li><a href="waste-guide.html" class="nav-link">Waste Guide</a></li>
+          <li><a href="recycling.html" class="nav-link">Recycling</a></li>
+          <li><a href="notices.html" class="nav-link">Notices</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="report.html" class="nav-btn-report">&#9888; Report Problem</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="contrast-toggle-btn" aria-label="Toggle high contrast view" aria-pressed="false">&#9681;
+          Contrast</button>
+        <button class="mobile-menu-toggle" aria-label="Open mobile navigation menu"
+          aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
   </header>
-  <main class="container">
+
+  <main id="main-content">
     <section class="hero">
-      <p class="eyebrow">Community information • Kampala</p>
-      <h1>A cleaner neighbourhood starts with shared action.</h1>
-      <p>Find collection information, learn how to separate waste, and report local waste concerns in participating communities.</p>
-      <div class="actions">
-        <a class="button" href="report.html">Report a waste concern</a>
-        <a class="button button-secondary" href="schedules.html">View collection information</a>
+      <div class="hero-content">
+        <span class="hero-badge">Urban Civic Technology &bull; Victoria University</span>
+        <h1>Cleaner Divisions, Healthier Parishes, Connected Kampala</h1>
+        <p>
+          Bridging the communication gap between Kampala residents, licensed waste collectors, and municipal services
+          across Central, Nakawa, Kawempe, Makindye, and Rubaga.
+        </p>
+        <div class="hero-cta-group">
+          <a href="report.html" class="btn btn-danger">&#9888; Report a Waste Problem</a>
+          <a href="schedules.html" class="btn btn-primary">&#128197; View Collection Schedules</a>
+          <a href="collectors.html" class="btn btn-secondary">&#128269; Find a Collector</a>
+        </div>
       </div>
     </section>
-    <section class="grid">
-      <article class="panel"><h2>Collection information</h2><p>Check area-specific schedules and collection points as verified information becomes available.</p><a href="schedules.html">Explore schedules →</a></article>
-      <article class="panel"><h2>Find a collector</h2><p>Browse provider details and verification status. Confirm service arrangements directly before paying.</p><a href="collectors.html">View directory →</a></article>
-      <article class="panel"><h2>Waste separation</h2><p>Learn practical ways to separate organic, recyclable, and residual waste.</p><a href="waste-guide.html">Read the guide →</a></article>
+
+    <section class="stats-strip" aria-label="Kampala Waste Realities">
+      <div class="stats-grid">
+        <article class="stat-item">
+          <h3>2,500+</h3>
+          <p>Tonnes generated daily in Greater Kampala</p>
+          <span class="stat-source">Source: KCCA Waste Assessment</span>
+        </article>
+        <article class="stat-item">
+          <h3>75–85%</h3>
+          <p>Biodegradable organic vegetable matter</p>
+          <span class="stat-source">Source: Makerere University Urban Ecology Studies</span>
+        </article>
+        <article class="stat-item">
+          <h3>~45%</h3>
+          <p>Estimated formal municipal collection rate</p>
+          <span class="stat-source">Source: NEMA State of the Environment Report</span>
+        </article>
+        <article class="stat-item">
+          <h3>5</h3>
+          <p>Municipal divisions served by our platform</p>
+          <span class="stat-source">Central, Nakawa, Kawempe, Makindye, Rubaga</span>
+        </article>
+      </div>
     </section>
-    <section class="notice"><h2>Community pilot</h2><p>This is a community information project. Pilot locations, schedules, provider details, and contact channels must be verified before being presented as official or current.</p></section>
+
+    <section class="container">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem;">
+        <h2>The Waste Management Challenge in Kampala</h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          Kampala faces rapid urbanisation. Uncollected waste leads to blocked drainage channels, flash flooding in
+          low-lying informal settlements, public health vulnerabilities, and environmental degradation in the Lake
+          Victoria basin.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-icon">&#128667;</div>
+          <h3>Uncertain Collection Times</h3>
+          <p>Residents frequently miss collection trucks due to erratic scheduling, leaving waste exposed to scavengers
+            and heavy rains on road reserves.</p>
+          <a href="schedules.html" class="btn btn-outline-dark" style="margin-top:1rem;">Check Division Schedules
+            &rarr;</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">&#128269;</div>
+          <h3>Collector Uncertainty</h3>
+          <p>Difficulty distinguishing between certified private concessionaires and informal tippers who may illegally
+            dump refuse in wetland buffer zones.</p>
+          <a href="collectors.html" class="btn btn-outline-dark" style="margin-top:1rem;">Browse Collector Directory
+            &rarr;</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">&#9851;</div>
+          <h3>Low Separation at Source</h3>
+          <p>Mixed waste prevents high-value plastic recycling and household composting, overburdening transit transfer
+            stations and municipal landfills.</p>
+          <a href="waste-guide.html" class="btn btn-outline-dark" style="margin-top:1rem;">Read Waste Guide &rarr;</a>
+        </article>
+      </div>
+    </section>
+
+    <section
+      style="background-color: var(--bg-subtle); padding: 4rem 1.5rem; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container" style="padding:0;">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 2.5rem;">
+          <h2>How Kampala Clean Neighbourhood Works</h2>
+          <p style="color: var(--text-muted);">Empowering households, community leaders, and collectors through
+            transparent digital access.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card" style="text-align: center;">
+            <div
+              style="width: 48px; height: 48px; background: var(--color-primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin: 0 auto 1rem; font-weight:bold; font-size:1.2rem;">
+              1</div>
+            <h3>Discover Schedules</h3>
+            <p>Select your division and parish to find designated collection days, time windows, and roadside collection
+              points.</p>
+          </div>
+
+          <div class="card" style="text-align: center;">
+            <div
+              style="width: 48px; height: 48px; background: var(--color-primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin: 0 auto 1rem; font-weight:bold; font-size:1.2rem;">
+              2</div>
+            <h3>Separate at Home</h3>
+            <p>Use our practical guide to separate organic matooke peels from PET bottles, scrap metal, and residual
+              household items.</p>
+          </div>
+
+          <div class="card" style="text-align: center;">
+            <div
+              style="width: 48px; height: 48px; background: var(--color-primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin: 0 auto 1rem; font-weight:bold; font-size:1.2rem;">
+              3</div>
+            <h3>Report &amp; Mobilise</h3>
+            <p>Report missed pickups, overflowing roadside skips, or illegal wetland dumping to create a public record
+              for community action.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="text-align: center; padding: 4rem 1.5rem;">
+      <div
+        style="background: linear-gradient(135deg, var(--color-primary-dark), #153828); color:#ffffff; padding: 3rem 2rem; border-radius: var(--radius-lg);">
+        <h2 style="color:#ffffff; margin-bottom:1rem;">Spot an Overflowing Skip or Blocked Drain?</h2>
+        <p style="max-width: 600px; margin: 0 auto 1.5rem; color: var(--color-accent-subtle);">
+          Submit an incident report right from your smartphone. Log your parish, photograph the problem, and keep your
+          community informed.
+        </p>
+        <a href="report.html" class="btn btn-danger">&#9888; Launch Incident Reporter</a>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer"><p>© <span data-year></span> Kampala Clean Neighbourhood · <a href="privacy.html">Privacy guidance</a> · <a href="contact.html">Contact</a></p></footer>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4>Kampala Clean Neighbourhood</h4>
+        <p>A civic environmental technology project developed by students of Victoria University Kampala under
+          Coursework 1315 ST (Internet Technology &amp; Web Design).</p>
+        <div class="footer-disclaimer-box">
+          <strong>Academic &amp; Civic Notice:</strong> This platform is not operated by KCCA or NEMA. Official
+          municipal enforcement inquiries must be directed to your local division authority.
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Divisions Covered</h4>
+        <ul class="footer-links">
+          <li><a href="schedules.html">Central Division</a></li>
+          <li><a href="schedules.html">Nakawa Division</a></li>
+          <li><a href="schedules.html">Kawempe Division</a></li>
+          <li><a href="schedules.html">Makindye Division</a></li>
+          <li><a href="schedules.html">Rubaga Division</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources &amp; Guides</h4>
+        <ul class="footer-links">
+          <li><a href="waste-guide.html">Separation at Source</a></li>
+          <li><a href="recycling.html">Recycling &amp; Upcycling</a></li>
+          <li><a href="collectors.html">Licensed Concessionaires</a></li>
+          <li><a href="notices.html">Community Advisories</a></li>
+          <li><a href="privacy.html">Data &amp; Reporting Ethics</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Victoria University Project</h4>
+        <p>Faculty of Science &amp; Technology<br>Kampala, Uganda</p>
+        <p><strong>Course:</strong> 1315 ST<br><strong>Status:</strong> Prototype Static Build</p>
+        <a href="faq.html" class="btn btn-outline-dark"
+          style="font-size:0.8rem; padding:0.4rem 0.8rem; background:#fff;">Platform FAQs &rarr;</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 Kampala Clean Neighbourhood Initiative &bull; Victoria University Kampala &bull; Built with standard
+      HTML5, CSS3, &amp; Vanilla JavaScript.
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
