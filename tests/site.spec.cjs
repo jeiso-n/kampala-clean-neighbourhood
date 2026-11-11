@@ -70,7 +70,7 @@ test.describe('Kampala Clean Neighbourhood - browser smoke tests', () => {
   test('decorative emoji icon elements have been removed without removing images', async ({ page }) => {
     await page.goto('/index.html');
     await expect(page.locator('.card-icon')).toHaveCount(0);
-    await expect(page.locator('img')).toHaveCount(await page.locator('img').count());
+    await expect(page.locator('.hero')).toBeVisible();
   });
   for (const viewport of [{ name: 'mobile', width: 390, height: 844 }, { name: 'tablet', width: 768, height: 1024 }, { name: 'desktop', width: 1365, height: 900 }]) {
     test(`homepage renders at ${viewport.name} viewport`, async ({ page }) => {
