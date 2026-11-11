@@ -780,3 +780,68 @@ footer.site-footer {
   .nav-menu li, .nav-link, .nav-btn-report { width: 100%; }
   .nav-link, .nav-btn-report { display: block; padding: .65rem .75rem; }
 }
+
+/* --------------------------------------------------------------------------
+   KCN refreshed interface: calm typography, clear hierarchy, compact header
+   -------------------------------------------------------------------------- */
+.civic-notice-bar {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .4rem .65rem;
+  padding: .3rem 1rem;
+  background: #153b2b;
+  color: #e7f3eb;
+  font-size: .72rem;
+  line-height: 1.35;
+  letter-spacing: .01em;
+}
+.civic-notice-bar .badge-demo { margin: 0; padding: .12rem .5rem; font-size: .62rem; }
+header.site-header { position: sticky; top: 0; background: rgba(255,255,255,.97); border-bottom: 1px solid #e4ebe6; box-shadow: 0 5px 22px rgba(20,48,33,.06); backdrop-filter: blur(14px); }
+.header-container { max-width: 1440px; min-height: 76px; padding: .65rem clamp(1rem,3vw,2.5rem); gap: clamp(.7rem,1.5vw,1.5rem); }
+.brand-wrapper { flex: 0 0 auto; gap: .65rem; }
+.brand-logo-icon { width: 42px; height: 42px; border-radius: 12px; font-size: 1.1rem; font-weight: 800; letter-spacing: -.04em; box-shadow: 0 4px 10px rgba(27,67,50,.16); }
+.brand-title { font-size: .98rem; letter-spacing: .035em; }
+.brand-tagline { font-size: .68rem; line-height: 1.3; }
+.primary-navigation { flex: 1 1 auto; min-width: 0; }
+.nav-menu { justify-content: center; gap: .12rem; white-space: nowrap; }
+.nav-link { display: inline-flex; align-items: center; padding: .48rem .55rem; border-radius: 8px; font-size: .78rem; font-weight: 600; }
+.nav-link.active { background: #eaf3ed; }
+.nav-more { position: relative; }
+.nav-more summary { cursor: pointer; list-style: none; padding: .48rem .62rem; border-radius: 8px; color: var(--text-muted); font-size: .78rem; font-weight: 650; }
+.nav-more summary::-webkit-details-marker { display: none; }
+.nav-more summary::after { content: '⌄'; margin-left: .35rem; color: var(--color-primary); }
+.nav-more[open] summary, .nav-more summary:hover { background: var(--bg-subtle); color: var(--color-primary-dark); }
+.nav-more-menu { position: absolute; top: calc(100% + .55rem); right: 0; z-index: 1100; min-width: 180px; padding: .45rem; list-style: none; background: #fff; border: 1px solid var(--border-color); border-radius: 12px; box-shadow: 0 16px 38px rgba(20,48,33,.14); }
+.nav-more-menu .nav-link { display: flex; width: 100%; padding: .58rem .7rem; }
+.header-actions { flex: 0 0 auto; gap: .45rem; }
+.contrast-toggle-btn { border-color: #dce6df; border-radius: 9px; padding: .48rem .65rem; font-size: .74rem; font-weight: 650; }
+.nav-btn-report { display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; padding: .58rem .85rem; border-radius: 9px; font-size: .76rem; font-weight: 700; box-shadow: 0 3px 8px rgba(45,106,79,.16); }
+.mobile-menu-toggle { border-radius: 9px; padding: .48rem .7rem; font-size: .8rem; font-weight: 650; color: var(--color-primary-dark); }
+.card-icon { display: none !important; }
+.hero-cta-group .btn { display: inline-flex; align-items: center; justify-content: center; }
+@media (max-width: 1180px) {
+  .header-container { position: relative; flex-wrap: wrap; min-height: 70px; }
+  .primary-navigation { order: 3; flex-basis: 100%; }
+  .mobile-menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .nav-menu { display: none; position: absolute; top: calc(100% + .55rem); left: 1rem; right: 1rem; z-index: 1200; flex-direction: column; align-items: stretch; gap: .15rem; max-height: min(72vh,560px); overflow-y: auto; padding: .65rem; background: #fff; border: 1px solid var(--border-color); border-radius: 14px; box-shadow: 0 18px 42px rgba(20,48,33,.16); }
+  .nav-menu.is-active { display: flex; }
+  .nav-menu > li, .nav-menu .nav-link { width: 100%; }
+  .nav-menu .nav-link { padding: .7rem .8rem; font-size: .88rem; }
+  .nav-more summary { padding: .7rem .8rem; font-size: .88rem; }
+  .nav-more-menu { position: static; min-width: 0; margin: .2rem .3rem .35rem; box-shadow: none; border-radius: 9px; background: #f8fbf9; }
+  .nav-more-menu .nav-link { padding: .6rem .8rem; }
+}
+@media (max-width: 520px) {
+  .civic-notice-bar { font-size: .66rem; }
+  .header-container { padding: .6rem .85rem; gap: .5rem; }
+  .brand-logo-icon { width: 38px; height: 38px; }
+  .brand-title { font-size: .88rem; }
+  .brand-tagline { max-width: 190px; font-size: .62rem; }
+  .header-actions { margin-left: auto; }
+  .contrast-toggle-btn { padding: .42rem .5rem; font-size: .68rem; }
+  .nav-btn-report { padding: .48rem .58rem; font-size: .68rem; }
+  .mobile-menu-toggle { padding: .42rem .55rem; font-size: .72rem; }
+}

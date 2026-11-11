@@ -1,4 +1,4 @@
-﻿const { test, expect } = require('@playwright/test');
+const { test, expect } = require('@playwright/test');
 
 const pages = [
   'index.html', 'about.html', 'schedules.html', 'collectors.html',
@@ -55,6 +55,23 @@ test.describe('Kampala Clean Neighbourhood - browser smoke tests', () => {
     await expect(page.locator('#contact-name')).toHaveValue('');
   });
 
+  test('secondary navigation and mobile menu remain accessible', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto('/index.html');
+    const menuButton = page.locator('.mobile-menu-toggle');
+    await menuButton.click();
+    await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+    await expect(page.locator('.nav-menu')).toBeVisible();
+    await page.locator('.nav-more summary').click();
+    await expect(page.locator('.nav-more-menu a[href="about.html"]')).toBeVisible();
+    await expect(page.locator('.nav-more-menu a[href="contact.html"]')).toBeVisible();
+  });
+
+  test('decorative emoji icon elements have been removed without removing images', async ({ page }) => {
+    await page.goto('/index.html');
+    await expect(page.locator('.card-icon')).toHaveCount(0);
+    await expect(page.locator('img')).toHaveCount(await page.locator('img').count());
+  });
   for (const viewport of [{ name: 'mobile', width: 390, height: 844 }, { name: 'tablet', width: 768, height: 1024 }, { name: 'desktop', width: 1365, height: 900 }]) {
     test(`homepage renders at ${viewport.name} viewport`, async ({ page }) => {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
